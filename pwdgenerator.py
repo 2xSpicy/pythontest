@@ -44,7 +44,3 @@ for y in schar_lst:
 
 fpwd = pwd1 + pwd2 + pwd3
 print(fpwd)
-
-
-
-print("hello world")
