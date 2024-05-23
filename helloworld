@@ -1,0 +1,727 @@
+print("hello world!",end="   ")# run in the same line >> end
+
+print(type(123))# check type >> type
+
+
+
+
+name = "kaunglin thant"
+
+print(name)
+
+age = 18
+name = "kaunglinthant"
+
+print(age)
+print(name)
+print(type(name))
+print(type(age))
+
+isn_over = True
+print(isn_over)
+
+point = 11.22
+
+print(point)
+
+# print formatting
+
+# format 1
+gf = "Ma Su Myat"
+gfu = "You"
+print("i love %s" %(gf))
+
+digit = 3000
+print('ilove%s%d' %(gfu,digit))
+# digit >> %d
+# string >> %s >> place holder
+
+# format 2
+print('ilove{}'.format(gf))
+print('ilike{} ilove{}{}'.format(gf,gfu,digit))
+print('ilike{2} ilove{1}{0}'.format(digit,gfu,gf))
+print('ilike{name} ilove{u}{number}'.format(name="Su Myat Noe", u="You", number=3000))
+
+# format 3 >> f string
+print(f"I love {gf}, I love {gfu}{digit}")
+
+
+# format 3
+n = 'masumyat'
+t = 3000
+u = "YOu"
+
+print(f"ilove{u}{n}{t}")
+
+
+#String Indexing 
+name = "johndoe"
+program = "ICT foundation program"
+
+#find with index
+first_number_of_name = name[2]
+forth_letter_of_program = program[6]
+print(first_number_of_name)
+print(forth_letter_of_program)
+
+#index slicing
+name = "Kaunglinthant"
+            #[start:end:step]
+result = name[::]
+print(result)
+result = name[::-1]
+print(result)
+result = name[::2]
+print(result)
+result = name[0:6:2]
+print(result)
+result = name[-1:-6:-2]
+print(result)
+
+
+#String methods
+
+#String concat
+st1 = 'hello'
+st2 = 'world!'
+res = st1 + st2
+print(res)  #concat
+
+
+#String multiplication
+n1 = 'su'
+print(n1 * 3)
+
+#String length
+name = 'kaunglinthant'
+lenght_of_name = len(name) #use "len" function to count number of string
+lenght_of_string = len('lynn') 
+print(lenght_of_name)
+print(lenght_of_string)
+
+
+
+#Use "." to call method >> .object()
+name = 'su myat noe ustaym'
+capname = name.capitalize() #capitalizing first letter of setence
+titname = name.title()      #capitalizing a letter of each word
+countname = name.count("u") #counting letter the u input
+
+print(capname)
+print(titname)
+print(countname)
+
+uppername = name.upper()    #all upper
+lowername = name.lower()    #all lower
+print(uppername)
+print(lowername)
+
+lowercheckname = name.islower() #check all lower
+print(lowercheckname)
+print(type(lowercheckname))
+
+uppercheckname = name.isupper() #check all upper
+print(uppercheckname)
+print(type(uppercheckname))
+
+endname = name.endswith("m")    #check end word
+print(type(endname))
+print(endname)
+
+startname = name.startswith("u") #check start word
+print(type(startname))
+print(startname)
+
+
+
+#String Operation
+
+#GreaterThan & LessThan
+a = 4
+b = 5
+result = a<b
+print(a<b)
+print(type(result)) #integer comparison
+
+var1 = 'a'
+var2 = 'b'
+result1 = var1<var2
+print(var1<var2)
+print(type(result1)) #character comparison
+
+#In character comparison, use unicode value to compare the character
+#Character to Unicode value
+print(ord('a')) #use ord() function to check unicode value of character
+print(ord('A'))
+#Unicode value to character
+print(chr(97))
+print(chr(65))
+
+var1 = 'a'
+var2 = 'A'
+print(var1>var2)
+
+#In String comparison, compare only the first of each string
+name1 = 'kaunglinthant'
+name2 = 'sumyatnoe'
+print(name1>name2)
+
+
+#Check character or substring in the string >> "in"
+name = 'sumyatnoekaunglinthant'
+result = 'eka' in name
+print(result)
+print(type(result))
+
+print('k' in name)
+
+
+
+#Operators
+
+#Arithmetic Operator
+#Addition
+a = 4
+b = 5
+c = a + b
+print(c)
+
+#Subtraction
+a = 4
+b = 5
+c = b - a
+print(c)
+
+#Multiplication
+a = 4
+b = 5
+c = b * a
+print(c)
+
+#Division 
+
+a = 10
+b = 3
+#Division
+print(a/b)  #float-point number 
+#Floor-division
+print(a//b) #integer number  >> nearest smaller integer
+#Modula
+print(a%b)  #integer number  >> modulus
+
+#exponent
+a = 3
+b = 4
+print( 3 ** 4 )
+
+#Operator Precedence
+# Parantehese >> exponent >> multiplication/Division >> addition/subtraction
+
+result = 2 + 3 * 4 - 2 / 4 + (2 * 2)
+print(result)
+
+
+#Comparison Operator
+print(1<2) #lessthan
+print(2>1) #greaterthan
+
+print(2<=2) #lessthan or equal to
+print(2>=2) #greaterthan or equal to
+
+print(2==2) #equal to
+
+print(2!=1) #not equal to 
+
+
+num1 = [1,2,3]
+num2 = [1,2,3]
+print(num1 == num2) #True >> check value
+print(num1 is num2) #False >> check name & value
+print(num1 is not num2) #True 
+# check object ID()
+print(id(num1))
+print(id(num2))
+
+
+#Statement vs Expression
+
+#Statement >> Instruction
+# Expression >> piece of code that can evaluate value
+
+length = 12
+width = 10
+    #[---expressio---]
+area = length * width   
+#[-----statement------]   
+
+print(area)
+
+#Assignment Operator
+a = 3 #assign
+print(a)
+a += 2 #add and assign
+print(a)
+a -= 2 #substract and assign
+print(a) 
+a *= 2 #multiply and assign
+print(a)
+a /= 2 #divide and assign
+print(a)
+a //= 2 #follor division and assign
+print(a)
+
+
+
+# Logical Operator
+
+# "and" operator
+    # true n true >> true
+    # false n true >> false
+    # false n false >> false
+# "or" operator
+    # true n true >> true
+    # false n true >> true
+    # false n false >> false
+# "not" operator
+    # true n true >> false
+    # false n true >> false
+    # false n false >> true
+
+
+# Bitwise Operator
+
+# Bitwise and
+a = 9                                                       # 9 >> 1 0 0 1
+b = 4                                                       # 4 >> 0 1 0 0
+# Work on binary number >> 9 change into it's binary number ---------------
+print(a & b)                                                #ans>> 0 0 0 0
+
+
+# Bitwise or                                        
+a = 9                                                       # 9 >> 1 0 0 1
+b = 4                                                       # 4 >> 0 1 0 0
+# Work on binary number >> 9 change into it's binary number ---------------
+print(a | b)                                                #ans>> 1 1 0 1
+
+
+# Bitwise xor
+a = 6                                                       # 6 >> 0 1 1 0
+b = 4                                                       # 4 >> 0 1 0 0
+# Work on binary number >> 9 change into it's binary number ---------------
+print(a ^ b)                                                #ans>> 0 0 1 0
+
+
+# Bitwise not
+a = 200
+print(~a)
+
+
+# Conditional Statement
+
+# if statement
+a = 5
+b = 3 
+
+if a < b:
+    print('a is greater than b')
+
+print('a is less than b')
+
+
+
+# if else statement
+a = 1
+if a != 1:
+    print('a is not 1')
+
+else:
+    print('a is 1')
+
+
+
+# if elif else statement
+a = 0
+b = 1
+if a == 1 or a == 7:
+    print('a is one')
+
+elif a == 2 or a == 10:
+    print('a is two')
+
+elif a == 3 or a == 1:
+    print('a is three')
+
+elif a == 0 or a == 1:
+    print('a is four')
+
+else:
+    print('a is zero')
+
+
+
+
+
+# if elif else statement - question
+
+price = 300
+
+if price >= 300:
+    print('you will get 30percent discount')
+    price -= ( price * 0.3 ) 
+    print(f"actual price : {price}" )
+
+elif price >=200 and price < 300:
+    print('you will get 20percent discount')
+    price -= ( price * 0.2 ) 
+    print(f"actual price : {price}" )
+
+elif price < 200 and price >= 100:
+    print('you will get 10percent discount')
+    price -= ( price * 0.1 ) 
+    print(f"actual price : {price}" )
+
+elif price < 100 and price >= 1:
+    print('you will get 5percent discount')
+    price -= ( price * 0.05 ) 
+    print(f"actual price : {price}" )
+
+else:
+    print('There will be no discount')
+
+    
+
+
+# List
+ppl = ['mgmg',20,'kyawkyaw',30]
+numofppl = len(ppl)
+print(numofppl)
+print(type(ppl))
+
+#  Nested List
+cls1 = ['mgmg',20]
+cls2 = ['kywkyw',30]
+cls3 = ['hlahla',40]
+room1 = [cls1,cls2,cls3]
+
+print(room1)
+print(len(room1))
+print(room1[0])
+print(room1[1])
+print(room1[2])
+
+
+# Append >> add object to list
+cls1 = ['mgmg',20]
+print(f'Before append: {cls1}')
+cls1.append('chgtocls4')
+print(f'After Append: {cls1}')
+
+# Adding the whole list >> Nested List
+cls10 = ['mgmg','minmin']
+cls11 = ['myamya','hmue']
+cls10.append(cls11)
+print(cls10)
+
+# Extend >> adding whole list to other list to make one list
+# !!!Not Nested!!!
+cls10 = ['mgmg','minmin']
+cls11 = ['myamya','hmue']
+cls10.extend(cls11)
+print(cls10)
+
+# Insert >> adding obj to excet index 
+hall1 = ['two','three','four']
+  # insert(index,'object')   
+hall1.insert(0,'one')
+print(hall1)
+
+# Remove >> removing obj with value
+hall1 = ['one', 'two', 'three', 'four']
+   # remove(objValue)
+hall1.remove('one')
+print(hall1)
+
+
+
+# Pop >> cut the last obj and create new list for the last obj
+# !!!"Pop" can remove obj with index number!!!
+cls1 = ['mgmg',20,'chgtocls4']
+# remove the last obj
+cls4 = cls1.pop()
+print(f'After_pop: {cls1}')
+print(f'New_pop_list: {cls4}')
+# remove with index number
+cls20 = cls1.pop(1)
+print(f'After_pop_w/index: {cls1}')
+print(f'New_pop_list_w/index: {cls20}')
+
+
+
+# Count >> counting the object that you want to
+cls5 = ['mgmg','kywkyw','mgmg']
+num_of_stu = cls5.count('mgmg')
+print(num_of_stu)
+
+
+# Indexof >> give index number of the obj that u put
+cls30 = ['mgmg','myat','kyi']
+index_of_kyi = cls30.index('kyi')
+print(f'Index number of kyi: {index_of_kyi}')
+
+# Copy >> copy a list & create a new list 
+cls5 = ['mgmg','kywkyw','mgmg']
+cls5_c = cls5.copy()
+print(f'Copy of cls5: {cls5_c}')
+
+# Sort >> sorting numbers
+num_list = [10,4,5,2,5,1,97]
+num_list.sort()
+print(f'num_list after Sort: {num_list}')
+
+# Reverse >> reverse obj in the list
+num_list = [1, 2, 4, 5, 5, 10, 97]
+num_list.reverse()
+print(f'num_list after reverse: {num_list}')
+
+
+
+
+# Tuple
+# Indexing
+stu1 = ('Kyiphyu',24,'DM','female',['Yangon','southokkala','12ward'])
+addr_of_stu1 = stu1[4]
+print(addr_of_stu1)
+print(addr_of_stu1[2])
+addi = stu1[3]
+print(addi)
+
+# Slicing
+stu1 = ('Kyiphyu',24,'DM','female','Yangon','southokkala','12ward')
+slic = stu1[-1:-4:-2]
+slicrev = stu1[::-1] #reverse slicing
+print(slic)
+
+# Tuple packing
+stu_mark = 40,50,60
+print(stu_mark)
+print(type(stu_mark))
+
+# Tuple unpacking
+stu1_m,stu2_m,stu3_m =  stu_mark
+print(f'student1s mark :{stu1_m}')
+print(f'student2s mark :{stu2_m}')
+print(f'student3s mark :{stu3_m}')
+
+
+
+# Tuple concat
+tupl1 = 1,2,3,4,3,2
+tupl2 = 3,4,5,3,2,3
+
+tupl3 = tupl1 + tupl2
+print(tupl3)
+
+# Tuple count >> counting the object that u put in
+tupl3 = (1, 2, 3, 4, 3, 2, 3, 4, 5, 3, 2, 3)
+tupl_count = tupl3.count(3)
+print(tupl_count)
+
+# Tuple Indexing
+tupl3 = (1, 2, 3, 4, 3, 2, 3, 4, 5, 3, 2, 3)
+tupl_index = tupl3.index(4)
+print(tupl_index)
+
+
+# List Vs Tuple
+
+    # List >> mutable       ==> take more space 
+    # Tuple >> unmutable    ==> memory efficient
+
+import sys
+
+lst1 = [1,2,3,4,5]
+lst2 = (1,2,3,4,5)
+
+print(sys.getsizeof(lst1))  #byte   
+print(sys.getsizeof(lst2))  #byte
+
+
+
+# Dictionary Data type
+#   Unorder Data Structure >> can't call with index number
+#   Call with key >> Key must be unique
+
+# 2 method to create Dictionary 
+# first method
+phone_num_list1 = {'koko':1234,
+                   'nyinyi':2345,
+                   'hlahla':3452}
+
+print(phone_num_list1)
+print(phone_num_list1['koko'])
+
+# second method
+phone_num_list2 = dict()    # Create Constructor
+print(type(phone_num_list2))
+phone_num_list2['noe'] = 1812
+phone_num_list2['kyi'] = 188
+phone_num_list2['myat'] = 102
+
+print(phone_num_list2)
+print(phone_num_list2['noe'])   #first method to get output
+# or
+oneofthenum = phone_num_list2.get('kyi')    #second method to get output
+print(oneofthenum)
+
+abtnoe = {'Noe' : [9977105054,9945799990,27,'northokkala'],
+          'Noebd' : [14,8,1997,'birthday']}
+print(abtnoe['Noe'])
+print(abtnoe['Noebd'])
+# Nested Dictionary
+
+abtu = {'Noe' : {'birthday':(14,8,1997,'Friday',),
+                 'Address':[230,'Okka8th Street','KhayMarThi','NorthOkkala','Yangon'],
+                 'Phone':[+959977105054],
+                 'AnniDate':(18,12,2023,)}}
+ 
+print(abtu['Noe']['birthday'][0])
+
+# Dictionary in the list
+
+songs = [
+    {'Benson':['Before You','Little Run','Slow it down'],
+     'DOB':2002,
+     'firstsong':'Ghost Town'},
+    {'Taylor Swift':['Creul Summer','We are never ever getting back together','august'],
+     'DOB':1989,
+     'firstsong':'Tim McGraw'},
+    {'Måneskin':['The Loneliest','Beggin','I wanna be your slave'],
+     'DOB':2016,
+     'firstsong':'Chosen'}
+]
+
+print(songs[0]['Benson'])
+
+# Dictionary Operator
+
+# Adding or Updating entries
+stuffid = {'stuff1':1,
+           'stuff2':2,
+           'stuff3':3}
+
+print(stuffid)
+
+stuffid['stuff4'] = 5
+print(stuffid)
+
+stuffid['stuff4'] = 4
+print(stuffid)
+
+
+# Removing entries
+del(stuffid['stuff4'])
+print(stuffid)
+
+# Pop Method
+stuffid = {'stuff1':1,
+           'stuff2':2,
+           'stuff3':3}
+
+pop_stuffId = stuffid.pop('stuff3') # output >> only "value"
+print(f'deleted stuff: {pop_stuffId}')
+print(stuffid)
+
+pop2_stuffId = stuffid.popitem()    # output >> key:value <type - tuple>
+print(f'deleted stuff:\n\t{pop2_stuffId}')
+print(stuffid)
+print(type(pop2_stuffId))
+
+
+# Length of Dictionary
+stuffid = {'stuff1':1,
+           'stuff2':2,
+           'stuff3':3}
+
+print(len(stuffid))
+
+
+# Checking key existance - "in"
+stuffid = {'stuff1':1,
+           'stuff2':2,
+           'stuff3':3}
+
+chkWithIn = 'stuff2' in stuffid # output - Boolean type
+print(chkWithIn)
+print(type(chkWithIn))
+
+
+# Set >> {_} 
+# Unorder Data structure >> can't call with index number
+
+# Creating set
+# Empty set
+emptySet = set()
+print(type(emptySet))
+
+# can't put duplicate data
+set = {12,12,12,34,34,2,2,4,4}
+print(set)
+
+
+# Set Operation
+
+# 'add' >> adding data
+new_set = {1,2,3}
+new_set.add(4)
+new_set.add(5)
+
+print(new_set)
+
+# 'discard' >> removing data
+new_set = {1, 2, 3, 4, 5}
+new_set.discard(5)
+new_set.discard(4)
+
+print(new_set)
+
+# 'union' >> set adding
+set1 = {1,2,3,4,5}
+set2 = {3,4,6,7,8}
+
+union_set = set1.union(set2)    #take 1 if contain duplicate data
+print(union_set)
+
+# 'intersection' >> pick only same data of "first set" from "Second set"
+set1 = {1,2,3,4,5}
+set2 = {3,4,6,7,8}
+
+intersetion_set = set1.intersection(set2)
+print(intersetion_set)
+
+# 'difference' >> pick only different data of "first set" from "second set"
+set1 = {1,2,3,4,5}
+set2 = {3,4,6,7,8}
+
+difference_set = set1.difference(set2)
+print(difference_set)
+
+
+
+# Input Function
+username = input('Enter your name: ')
+print(f'Hello {username}!')
+
+print(type(username))   #only string value
+
+# Type conversion
+int_value = 22
+print(type(int_value))
+
+converTofloat = float(int_value)
+print(converTofloat)
+print(type(converTofloat))
+
+age = input('Your age : ')
+int_age = int(age)
+print(f'Ur age: {int_age}')
+print(type(int_age))
