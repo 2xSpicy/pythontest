@@ -5,42 +5,26 @@ nums = [1,2,3,4,5,6,7,8,9]
 schars = ['!','@','#','$','%','^','&','*','?']
 
 letter_lst = []
-num_lst = []
-schar_lst = []
-
 num_letter = int(input('Enter number of letter: '))
 num_num = int(input('Enter number of num: '))
 num_schar = int(input('Enter number of schar: '))
 
+
 for x in range(0,num_letter):
     index = letters[random.randint(0,len(letters)-1)]
     letter_lst.append(index)
-    print(letter_lst)
+    
+for x in range(0, num_num):
+    index = nums[random.randint(0, len(nums)-1)]
+    letter_lst.append(index)
 
-pwd1 = ''
-for y in letter_lst:
-    pwd1 += str(y)
-    print(pwd1)
+for x in range(0, num_schar):
+    index = schars[random.randint(0, len(schars)-1)]
+    letter_lst.append(index)
 
-for x in range(0,num_num):
-    index = nums[random.randint(0,len(nums)-1)]
-    num_lst.append(index)
-    print(num_lst)
-
-pwd2 = ''
-for y in num_lst:
-    pwd2 += str(y)
-    print(pwd2)
-
-for x in range(0,num_schar):
-    index = schars[random.randint(0,len(schars)-1)]
-    schar_lst.append(index)
-    print(schar_lst)
-
-pwd3 = ''
-for y in schar_lst:
-    pwd3 += str(y)
-    print(pwd3)
-
-fpwd = pwd1 + pwd2 + pwd3
-print(fpwd)
+pwd = ''
+for x in range(0, len(letter_lst)):
+    shuffle = letter_lst[random.randint(0, len(letter_lst)-1)]
+    pwd = pwd + str(shuffle)
+    
+print(pwd)
