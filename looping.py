@@ -26,4 +26,29 @@ while year <= 2024:
     age += 1
     year += 1
 
+# Normal 
+oldlst = [1,2,3,4,5]
+newlst = []
 
+for x in oldlst:
+    newlst.append(x)
+    print(newlst)
+
+# List Comprehension
+
+firstlst = [2,3,4,5,6]
+secondlst = [i-1 for i in firstlst]
+print(secondlst)
+
+# List Comprehension
+
+evenlst = [i for i in range(1,21) if i%2 == 0]
+print(evenlst)
+
+even_lst = []
+for i in range(1,21):
+    if i % 2 == 0:
+        even_lst.append(i)
+print(even_lst)
+
+    
