@@ -44,3 +44,13 @@ for y in schar_lst:
 
 fpwd = pwd1 + pwd2 + pwd3
 print(fpwd)
+
+pwdlst = list(fpwd)
+random.shuffle(pwdlst)
+print(pwdlst)
+
+ffpwd = ''
+for x in pwdlst:
+    ffpwd += x
+    
+print(ffpwd)
