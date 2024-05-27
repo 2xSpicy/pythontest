@@ -42,13 +42,24 @@ print(secondlst)
 
 # List Comprehension
 
-evenlst = [i for i in range(1,21) if i%2 == 0]
-print(evenlst)
+even_lst = [i for i in range(1,21) if i%2 == 0]
+print(even_lst)
 
-even_lst = []
 for i in range(1,21):
     if i % 2 == 0:
         even_lst.append(i)
 print(even_lst)
 
-    
+
+# Dictionary comprehension
+import random
+student = {'mgmg':120,'mya':100,'hla':150,'myat':180}
+
+student_mark = {name:mark -20 for (name,mark) in student.items() if mark==100}
+print(student_mark)
+
+
+stu_name = ['kyi','myat','noe','thant']
+
+stu_w_marks = {name:random.randint(1,100) for name in stu_name}
+print(stu_w_marks)

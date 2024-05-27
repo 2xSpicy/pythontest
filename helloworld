@@ -725,3 +725,10 @@ age = input('Your age : ')
 int_age = int(age)
 print(f'Ur age: {int_age}')
 print(type(int_age))
+
+
+# List Comprehension
+
+name = ['noe','su','myat']
+say_love = [f'i love you{i}' for i in name]
+print(say_love)
